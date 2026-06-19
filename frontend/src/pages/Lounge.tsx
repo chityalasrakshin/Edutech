@@ -92,7 +92,7 @@ const Lounge = () => {
 
   const handleOpenVRKahoot = () => {
     localStorage.setItem("vrGameStartTime", Date.now().toString());
-    localStorage.setItem("vrGameRoomName", "VR Kahoot");
+    localStorage.setItem("vrGameRoomName", "MindFlix Battle Royale");
     window.open(`https://15.206.205.126:8080/theater.html?username=${user?.username}`, "_blank");
   };
 

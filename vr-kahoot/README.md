@@ -1,11 +1,11 @@
-# VR Kahoot
+# MindFlix Battle Royale
 
-A multiplayer VR quiz game inspired by Kahoot, built with A-Frame, FastAPI, Socket.IO, and Networked-AFrame. Players join a virtual theater, answer questions, and see avatars of other players in real time.
+A multiplayer VR quiz battle inspired by cinematic game shows, built with A-Frame, FastAPI, Socket.IO, and Networked-AFrame. Players join a virtual theater, answer rounds, and see avatars of other players in real time.
 
 ## Features
 - Multiplayer VR quiz experience
 - Real-time avatars using Networked-AFrame and EasyRTC
-- Host control panel for managing questions and rounds
+- Battle Director panel for managing questions and rounds
 - Works in desktop and VR browsers
 
 ## Project Structure
@@ -71,14 +71,14 @@ python main.py
 
 ### 3. Open in Browser
 - Lobby: [http://localhost:8000/](http://localhost:8000/)
-- Host Panel: [http://localhost:8000/host.html](http://localhost:8000/host.html)
-- VR Theater: [http://localhost:8000/theater.html?username=YourName](http://localhost:8000/theater.html?username=YourName)
+- Battle Director Panel: [http://localhost:8000/host.html](http://localhost:8000/host.html)
+- Battle Theater: [http://localhost:8000/theater.html?username=YourName](http://localhost:8000/theater.html?username=YourName)
 
 ## Game Flow
-1. Host starts the game from the host panel
-2. Players join via the lobby and enter their names
-3. Host advances questions and shows results
-4. Players answer using VR controllers or mouse/keyboard
+1. Battle Director starts the game from the host panel
+2. Heroes join via the lobby and enter their names
+3. Battle Director advances questions and shows results
+4. Heroes answer using VR controllers or mouse/keyboard
 5. Scores are tracked and displayed
 
 ## Troubleshooting

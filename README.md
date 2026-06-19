@@ -1,6 +1,6 @@
-# Gurukul
+# MindFlix Academy
 
-AI-first immersive education platform that combines adaptive learning, VR classrooms, multiplayer quizzes, and blockchain-based rewards.
+GenZ-style immersive learning platform that streams STEM like a cinematic saga with AI quests, VR arenas, multiplayer quiz battles, and blockchain-based rewards.
 
 ## Problem Statement
 
@@ -24,14 +24,14 @@ Current education tools solve parts of the problem, but rarely address the full 
 
 ## Our Solution
 
-Gurukul brings these pieces together into one adaptive learning ecosystem.
+MindFlix Academy brings these pieces together into one adaptive learning multiverse.
 
-- **AI diagnostic quizzes** generate fresh subject-specific questions using Gemini and attach signals to each option so incorrect answers reveal specific weak topics.
-- **Adaptive student profiling** stores per-subject and per-topic mastery scores in MongoDB and updates them after every session using Exponential Moving Average.
-- **Immersive VR learning** uses browser-based A-Frame/WebXR scenes for virtual classrooms, labs, lounges, and multiplayer quiz environments.
-- **AI chatbot support** gives students instant doubt resolution with text, voice input, and text-to-speech output.
-- **Gamified marketplace** rewards learning activity with points and EduTokens that can be redeemed for marketplace items.
-- **Blockchain rewards** use smart contracts for token-based student incentives and marketplace purchases.
+- **Oracle Quiz Forge** generates fresh subject-specific questions using Gemini and attaches signals to each option so incorrect answers reveal specific weak arcs.
+- **Hero profile engine** stores per-subject and per-topic mastery scores in MongoDB and updates them after every session using Exponential Moving Average.
+- **Danger Room simulations** use browser-based A-Frame/WebXR scenes for virtual classrooms, labs, lounges, and multiplayer quiz environments.
+- **Jarvis Jr. sidekick** gives learners instant doubt resolution with text, voice input, and text-to-speech output.
+- **Black Market loot drops** reward learning activity with points and EduTokens that can be redeemed for digital items.
+- **Vault rewards** use smart contracts for token-based learner incentives and loot purchases.
 
 ## Tech Stack
 
@@ -47,12 +47,12 @@ Gurukul brings these pieces together into one adaptive learning ecosystem.
 
 1. A student registers or logs in through the React frontend.
 2. The FastAPI backend manages authentication, courses, quizzes, marketplace data, wallet details, and MongoDB persistence.
-3. The student enters learning spaces such as subject pages, the quiz room, marketplace, lounge, or VR Kahoot.
+3. The learner enters spaces such as saga pages, the quiz room, Black Market, Upside Lounge, or MindFlix Battle Royale.
 4. Gemini generates diagnostic quiz questions and maps answer options to topic-level learning signals.
 5. Student answers are scored and converted into topic deltas.
 6. The backend updates the student's adaptive learning profile in MongoDB.
 7. Students receive points or EduTokens for learning activity and can redeem them in the marketplace.
-8. VR Kahoot provides a multiplayer quiz flow with host controls, live player avatars, and real-time scoring.
+8. MindFlix Battle Royale provides a multiplayer quiz flow with Battle Director controls, live player avatars, and real-time scoring.
 
 ## Setup
 
@@ -95,7 +95,7 @@ npm install
 npm run dev
 ```
 
-### VR Kahoot
+### MindFlix Battle Royale
 
 ```bash
 cd vr-kahoot
@@ -129,7 +129,7 @@ npx hardhat ignition deploy ignition/modules/EduSystem.ts --network localhost
 
 ### Run All Services
 
-On Unix-like shells, the root script starts the backend, frontend, and VR Kahoot services together:
+On Unix-like shells, the root script starts the backend, frontend, and MindFlix Battle Royale services together:
 
 ```bash
 ./run.sh
@@ -140,4 +140,4 @@ Default local URLs:
 - Frontend: `http://localhost:5173`
 - Backend API: `http://localhost:8000`
 - Backend docs: `http://localhost:8000/docs`
-- VR Kahoot lobby: `http://localhost:8000/`
+- MindFlix Battle Royale lobby: `http://localhost:8000/`

@@ -1,4 +1,4 @@
-# Gurukul Agent Instructions
+# MindFlix Academy Agent Instructions
 
 ## Setup
 - Set `GEMINI_API_KEY` and `MONGODB_URI` in `.env`
@@ -7,7 +7,7 @@
 
 ## Run
 - Backend: `uvicorn main:app --reload`
-- VR Kahoot: `cd vr-kahoot && npm run dev`
+- MindFlix Battle Royale: `cd vr-kahoot && npm run dev`
 - Build: `npm run build` in frontend
 
 ## Test
