@@ -17,7 +17,7 @@ load_dotenv()
 
 # --- CONFIG ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MONGO_URI = os.getenv("MONGO_URI")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("MONGODB_URI")
 DB_NAME = os.getenv("DB_NAME", "newdb")
 EMA_ALPHA = 0.25  # weight given to the newest test result
 
@@ -625,4 +625,8 @@ async def webrtc_signal(sid, data):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8080, ssl_keyfile="key.pem", ssl_certfile="cert.pem")
+    ssl_kwargs = {}
+    if os.path.exists("key.pem") and os.path.exists("cert.pem"):
+        ssl_kwargs = {"ssl_keyfile": "key.pem", "ssl_certfile": "cert.pem"}
+
+    uvicorn.run(app, host="0.0.0.0", port=8080, **ssl_kwargs)

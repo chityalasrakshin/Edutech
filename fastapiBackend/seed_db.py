@@ -14,7 +14,7 @@ elif (BASE_DIR.parent / "backend" / ".env").exists():
 else:
     load_dotenv()
 
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
+MONGO_URI = os.getenv("MONGO_URI") or os.getenv("MONGODB_URI") or "mongodb://localhost:27017"
 DB_NAME = os.getenv("DB_NAME", "smartedu_db")
 
 # Monkey-patch AsyncIOMotorClient to support append_metadata (compatibility with Beanie 2.1.0)
