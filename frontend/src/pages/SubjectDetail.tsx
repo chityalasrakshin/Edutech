@@ -6,62 +6,62 @@ import { ArrowLeft, GraduationCap, ArrowRight, ExternalLink } from "lucide-react
 
 const subjectData: Record<string, any> = {
   maths: {
-    name: "Mathematics",
-    label: "Logic Arena",
+    name: "Multiverse Maths",
+    label: "Strange Academy",
     icon: "🔢",
     color: "#60A5FA",
-    description: "Advanced calculus, algebra, and geometry.",
+    description: "Reality-bending calculus, algebra, and geometry quests.",
     topics: [
-      { id: 1, title: "Calculus Fundamentals", slug: "calculus", progress: 75, lessons: 12 },
-      { id: 2, title: "Linear Algebra", slug: "linear-algebra", progress: 100, lessons: 10 },
-      { id: 3, title: "Probability & Statistics", slug: "probability", progress: 30, lessons: 15 },
-      { id: 4, title: "Differential Equations", slug: "differential-equations", progress: 10, lessons: 14 },
+      { id: 1, title: "Time Stone Calculus", slug: "calculus", progress: 75, lessons: 12 },
+      { id: 2, title: "Matrix Mode Algebra", slug: "linear-algebra", progress: 100, lessons: 10 },
+      { id: 3, title: "Chaos Odds", slug: "probability", progress: 30, lessons: 15 },
+      { id: 4, title: "Portal Equations", slug: "differential-equations", progress: 10, lessons: 14 },
     ],
   },
   physics: {
-    name: "Physics",
-    label: "Physical World",
+    name: "Vought Physics",
+    label: "Superpower Lab",
     icon: "⚛️",
     color: "#A855F7",
-    description: "Laws of motion, energy, and the universe.",
+    description: "Motion, energy, and universe rules with main-character energy.",
     topics: [
-      { id: 1, title: "Classical Mechanics", slug: "mechanics", progress: 60, lessons: 14 },
-      { id: 2, title: "Electromagnetism", slug: "electromagnetism", progress: 45, lessons: 12 },
-      { id: 3, title: "Quantum Physics", slug: "quantum", progress: 20, lessons: 18 },
-      { id: 4, title: "Thermodynamics", slug: "thermodynamics", progress: 80, lessons: 10 },
+      { id: 1, title: "Homelander Motion Laws", slug: "mechanics", progress: 60, lessons: 14 },
+      { id: 2, title: "Stark Arc Fields", slug: "electromagnetism", progress: 45, lessons: 12 },
+      { id: 3, title: "Quantum Variant Theory", slug: "quantum", progress: 20, lessons: 18 },
+      { id: 4, title: "Dragonfire Thermo", slug: "thermodynamics", progress: 80, lessons: 10 },
     ],
   },
   chemistry: {
-    name: "Chemistry",
-    label: "Atomic Lab",
+    name: "Heisenberg Chem",
+    label: "Cook Lab",
     icon: "🧪",
     color: "#34D399",
-    description: "Molecular structures and chemical reactions.",
+    description: "Molecules, reactions, and lab logic that actually hits.",
     topics: [
-      { id: 1, title: "Atomic Structure", slug: "atomic-structure", progress: 90, lessons: 8 },
-      { id: 2, title: "Organic Chemistry", slug: "organic-chemistry", progress: 50, lessons: 20 },
-      { id: 3, title: "Chemical Equilibrium", slug: "equilibrium", progress: 15, lessons: 12 },
-      { id: 4, title: "Thermodynamics in Chem", slug: "chem-thermo", progress: 5, lessons: 10 },
+      { id: 1, title: "Los Pollos Atomic Build", slug: "atomic-structure", progress: 90, lessons: 8 },
+      { id: 2, title: "Blue Crystal Carbon", slug: "organic-chemistry", progress: 50, lessons: 20 },
+      { id: 3, title: "Gus Fring Equilibrium", slug: "equilibrium", progress: 15, lessons: 12 },
+      { id: 4, title: "Meth Lab Thermo", slug: "chem-thermo", progress: 5, lessons: 10 },
     ],
   },
   anatomy: {
-    name: "Anatomy",
-    label: "Life Sciences",
+    name: "Upside Biology",
+    label: "Stranger Lab",
     icon: "🦴",
     color: "#F87171",
-    description: "Explore living organisms and biological systems.",
+    description: "Bodies, organisms, and systems from the normal world to the Upside Down.",
     topics: [
-      { id: 1, title: "Human Anatomy", slug: "human-anatomy", progress: 55, lessons: 10 },
-      { id: 2, title: "Genetics & DNA", slug: "genetics", progress: 0, lessons: 12 },
-      { id: 3, title: "Nervous System", slug: "nervous-system", progress: 35, lessons: 14 },
-      { id: 4, title: "Cardiovascular System", slug: "cardiovascular", progress: 70, lessons: 12 },
+      { id: 1, title: "Titan Body Blueprint", slug: "human-anatomy", progress: 55, lessons: 10 },
+      { id: 2, title: "Targaryen DNA", slug: "genetics", progress: 0, lessons: 12 },
+      { id: 3, title: "Vecna Neural Net", slug: "nervous-system", progress: 35, lessons: 14 },
+      { id: 4, title: "Heart of Wakanda", slug: "cardiovascular", progress: 70, lessons: 12 },
     ],
   },
 };
 
 const NOTES: Record<string, any> = {
   "calculus": {
-    title: "Advanced Calculus: The Study of Change",
+    title: "Time Stone Calculus: The Study of Change",
     content: [
       { type: "h2", text: "1. The Concept of Limits" },
       { type: "p", text: "Calculus is built on the concept of limits. A limit describes the value that a function approaches as the input approaches some value. This allows us to deal with infinitely small changes and values that might otherwise result in undefined expressions like 0/0." },
@@ -82,7 +82,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "linear-algebra": {
-    title: "Linear Algebra: Structures of Dimension",
+    title: "Matrix Mode Algebra: Structures of Dimension",
     content: [
       { type: "h2", text: "1. Vectors and Vector Spaces" },
       { type: "p", text: "A vector is more than just a list of numbers; it represents a point or a direction in a high-dimensional space. A vector space is a mathematical structure that allows us to combine vectors through addition and scaling." },
@@ -98,7 +98,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "probability": {
-    title: "Probability & Statistics: Quantifying Uncertainty",
+    title: "Chaos Odds: Quantifying Uncertainty",
     content: [
       { type: "h2", text: "1. The Laws of Probability" },
       { type: "p", text: "Probability is the measure of the likelihood that an event will occur. It ranges from 0 (impossible) to 1 (certain)." },
@@ -114,7 +114,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "differential-equations": {
-    title: "Differential Equations: Modeling Reality",
+    title: "Portal Equations: Modeling Reality",
     content: [
       { type: "h2", text: "1. What are DEs?" },
       { type: "p", text: "A differential equation relates a function to its derivatives. They are the primary language used to describe change in physics, biology, and engineering." },
@@ -125,7 +125,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "mechanics": {
-    title: "Classical Mechanics: The Clockwork Universe",
+    title: "Homelander Motion Laws: The Clockwork Universe",
     content: [
       { type: "h2", text: "1. Newton's Three Laws" },
       { type: "p", text: "Isaac Newton's laws of motion transformed our understanding of the physical world. They describe how force and mass interact to produce acceleration." },
@@ -141,7 +141,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "electromagnetism": {
-    title: "Electromagnetism: Fields and Waves",
+    title: "Stark Arc Fields: Waves and Charge",
     content: [
       { type: "h2", text: "1. Electric Fields" },
       { type: "p", text: "Charged particles create invisible fields in space that exert forces on other charges. This is governed by Coulomb's Law." },
@@ -152,7 +152,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "quantum": {
-    title: "Quantum Physics: The Logic of the Invisible",
+    title: "Quantum Variant Theory: The Logic of the Invisible",
     content: [
       { type: "h2", text: "1. The End of Determinism" },
       { type: "p", text: "In classical physics, we predict the future exactly. In quantum mechanics, we can only predict probabilities. Particles don't have definite positions until measured." },
@@ -163,7 +163,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "thermodynamics": {
-    title: "Thermodynamics: Heat and Power",
+    title: "Dragonfire Thermo: Heat and Power",
     content: [
       { type: "h2", text: "1. The Zeroth Law" },
       { type: "p", text: "Defines the concept of temperature. If two systems are in thermal equilibrium with a third, they are in equilibrium with each other." },
@@ -174,7 +174,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "atomic-structure": {
-    title: "Atomic Structure: The Architecture of Matter",
+    title: "Los Pollos Atomic Build: The Architecture of Matter",
     content: [
       { type: "h2", text: "1. The Subatomic Components" },
       { type: "p", text: "Everything we see is made of atoms. At the center is a dense nucleus of protons and neutrons, surrounded by a cloud of electrons." },
@@ -190,7 +190,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "organic-chemistry": {
-    title: "Organic Chemistry: The Carbon Story",
+    title: "Blue Crystal Carbon: The Organic Story",
     content: [
       { type: "h2", text: "1. The Versatility of Carbon" },
       { type: "p", text: "Carbon is the foundation of life. Its ability to form four stable covalent bonds allows it to build infinite varieties of long chains and complex rings." },
@@ -201,7 +201,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "equilibrium": {
-    title: "Chemical Equilibrium: The Balance of Forces",
+    title: "Gus Fring Equilibrium: The Balance of Forces",
     content: [
       { type: "h2", text: "1. Reversible Reactions" },
       { type: "p", text: "Many reactions don't just go one way. Products can react to reform reactants. Equilibrium is reached when forward and reverse rates are equal." },
@@ -212,7 +212,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "chem-thermo": {
-    title: "Thermodynamics in Chemistry",
+    title: "Meth Lab Thermo in Chemistry",
     content: [
       { type: "h2", text: "1. Enthalpy (H)" },
       { type: "p", text: "The total heat content of a system. Exothermic reactions release heat, while endothermic reactions absorb it." },
@@ -223,7 +223,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "human-anatomy": {
-    title: "Human Anatomy: The Biological Machine",
+    title: "Titan Body Blueprint: The Biological Machine",
     content: [
       { type: "h2", text: "1. Gross vs. Microscopic Anatomy" },
       { type: "p", text: "Gross anatomy deals with structures visible to the naked eye, while microscopic anatomy (histology) looks at tissues and cells." },
@@ -234,7 +234,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "genetics": {
-    title: "Genetics & DNA: The Code of Life",
+    title: "Targaryen DNA: The Code of Life",
     content: [
       { type: "h2", text: "1. The Molecule of Life" },
       { type: "p", text: "DNA (Deoxyribonucleic acid) is a long molecule that contains instructions for every biological function, composed of Adenine, Thymine, Cytosine, and Guanine." },
@@ -245,7 +245,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "nervous-system": {
-    title: "The Nervous System: The Bio-Electrical Network",
+    title: "Vecna Neural Net: The Bio-Electrical Network",
     content: [
       { type: "h2", text: "1. The Central Processing Unit" },
       { type: "p", text: "The brain and spinal cord form the Central Nervous System (CNS), processing every thought, movement, and sensation." },
@@ -256,7 +256,7 @@ const NOTES: Record<string, any> = {
     ]
   },
   "cardiovascular": {
-    title: "Cardiovascular System: The Transport Highway",
+    title: "Heart of Wakanda: The Transport Highway",
     content: [
       { type: "h2", text: "1. The Heart" },
       { type: "p", text: "The heart is a four-chambered muscle that beats 100,000 times a day, using two separate circuits to oxygenate blood." },
@@ -269,10 +269,10 @@ const NOTES: Record<string, any> = {
 };
 
 const DEFAULT_NOTE = {
-  title: "Academic Module Records",
+  title: "Saga Archive Records",
   content: [
-    { type: "h2", text: "System Initializing..." },
-    { type: "p", text: "Please select a learning module from the curriculum to view the comprehensive academic records. Our database contains detailed notes for every active topic." },
+    { type: "h2", text: "Stream Initializing..." },
+    { type: "p", text: "Pick a saga episode from the archive to unlock detailed notes for every active arc." },
   ]
 };
 
@@ -312,8 +312,8 @@ const SubjectDetail = () => {
                 <ArrowLeft size={16} className="group-hover:-translate-x-0.5 transition-transform" />
               </button>
               <div className="min-w-0">
-                <h1 className="text-sm md:text-xl font-black text-white leading-none mb-1 uppercase tracking-tight italic truncate">{subject.name} Notes</h1>
-                <p className="text-[8px] md:text-[10px] font-bold text-white/20 uppercase tracking-widest truncate">Academic Hub • 2026</p>
+                <h1 className="text-sm md:text-xl font-black text-white leading-none mb-1 uppercase tracking-tight italic truncate">{subject.name} Lore</h1>
+                <p className="text-[8px] md:text-[10px] font-bold text-white/20 uppercase tracking-widest truncate">MindFlix Vault • 2026</p>
               </div>
             </div>
             <button 
@@ -338,7 +338,7 @@ const SubjectDetail = () => {
               
               <div className="max-w-2xl mx-auto space-y-10 md:space-y-16 relative z-10">
                 <div className="pb-8 md:pb-10 border-b border-white/5">
-                   <span className="inline-block px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/30 text-[7px] md:text-[8px] font-black tracking-widest uppercase mb-4 md:mb-6">Subject Archives</span>
+                   <span className="inline-block px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-white/30 text-[7px] md:text-[8px] font-black tracking-widest uppercase mb-4 md:mb-6">Saga Archives</span>
                    <h2 className="text-3xl md:text-6xl font-black text-white tracking-tighter mb-3 md:mb-4 italic uppercase leading-[1.1]">{note.title}</h2>
                    <p className="text-[10px] md:text-xs font-bold text-white/20 tracking-[0.2em] md:tracking-[0.3em] uppercase">Verified Academic Content • Hub Protocol</p>
                 </div>
@@ -367,12 +367,12 @@ const SubjectDetail = () => {
                 </div>
 
                 <div className="pt-20 mt-20 border-t border-white/5 text-center">
-                   <p className="text-[10px] font-bold text-white/10 tracking-[0.5em] uppercase mb-8">END OF MODULE RECORDS</p>
+                    <p className="text-[10px] font-bold text-white/10 tracking-[0.5em] uppercase mb-8">END OF EPISODE RECORDS</p>
                    <button 
                     onClick={() => setActiveTopicId(null)}
                     className="px-10 py-5 rounded-2xl bg-white/5 border border-white/10 text-white/40 font-black text-[10px] tracking-widest hover:bg-white hover:text-black transition-all uppercase italic"
                    >
-                     RETURN TO CURRICULUM
+                     RETURN TO SAGA LIST
                    </button>
                 </div>
               </div>
@@ -399,7 +399,7 @@ const SubjectDetail = () => {
             className="flex items-center gap-2 text-white/30 hover:text-white transition-colors mb-8 md:mb-12 group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="text-[10px] font-bold tracking-widest uppercase">Return to Hub</span>
+             <span className="text-[10px] font-bold tracking-widest uppercase">Return to Watchtower</span>
           </button>
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-12">
@@ -414,10 +414,10 @@ const SubjectDetail = () => {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="glass-panel px-6 py-4 md:px-8 md:py-4 rounded-[1.5rem] md:rounded-[2rem] text-left md:text-right w-fit">
-              <p className="text-[8px] md:text-[10px] font-bold text-white/30 tracking-widest uppercase mb-1">Curriculum</p>       
+               <p className="text-[8px] md:text-[10px] font-bold text-white/30 tracking-widest uppercase mb-1">Saga Queue</p>       
               <div className="flex items-baseline gap-2">
                 <span className="text-2xl md:text-3xl font-black text-white">{subject.topics.length}</span>
-                <span className="text-[10px] md:text-xs font-bold text-white/30 uppercase tracking-widest">Active Topics</span>
+                 <span className="text-[10px] md:text-xs font-bold text-white/30 uppercase tracking-widest">Active Arcs</span>
               </div>
             </motion.div>
           </div>
@@ -429,7 +429,7 @@ const SubjectDetail = () => {
            <section>
               <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
                 <GraduationCap size={20} className="md:w-6 md:h-6 text-white/40" />
-                <h2 className="text-xl md:text-3xl font-black tracking-tight text-white uppercase italic">Learning Modules</h2>
+                 <h2 className="text-xl md:text-3xl font-black tracking-tight text-white uppercase italic">Episode Arcs</h2>
                 <div className="h-px flex-1 bg-white/10" />
               </div>
 
@@ -448,7 +448,7 @@ const SubjectDetail = () => {
                       <div className="flex justify-between items-center mb-8">
                         <div>
                           <h4 className="text-2xl font-black text-white group-hover:translate-x-1 transition-transform uppercase italic">{topic.title}</h4>
-                          <p className="text-[10px] font-bold text-white/20 uppercase tracking-widest mt-1">{topic.lessons} Knowledge Units</p>
+                          <p className="text-[10px] font-bold text-white/20 uppercase tracking-widest mt-1">{topic.lessons} Plot Points</p>
                         </div>
                         <div className="text-right">
                           <span className="text-sm font-black text-white/50">{topic.progress}%</span>
@@ -466,7 +466,7 @@ const SubjectDetail = () => {
                           {topic.progress === 100 ? 'Verified Complete' : topic.progress === 0 ? 'Not initialized' : 'In Progress'}
                         </p>
                         <div className="flex items-center gap-3 text-white/20 group-hover:text-white transition-colors">
-                           <span className="text-[10px] font-black uppercase tracking-widest">OPEN ARCHIVES</span>
+                           <span className="text-[10px] font-black uppercase tracking-widest">OPEN LORE</span>
                            <ArrowRight size={18} />
                         </div>
                       </div>

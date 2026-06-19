@@ -72,9 +72,9 @@ const Lounge = () => {
   }, [fetchUser]);
 
   const subjects = [
-    { id: "Biology", name: "Life Sciences", icon: "🧬", color: "#34D399", players: 4 },
-    { id: "Chemistry", name: "Atomic Lab", icon: "🧪", color: "#A855F7", players: 2 },
-    { id: "Math", name: "Logic Arena", icon: "🔢", color: "#60A5FA", players: 7 },
+    { id: "Biology", name: "Upside Biology", icon: "🧬", color: "#34D399", players: 4 },
+    { id: "Chemistry", name: "Heisenberg Chem", icon: "🧪", color: "#A855F7", players: 2 },
+    { id: "Math", name: "Multiverse Maths", icon: "🔢", color: "#60A5FA", players: 7 },
   ];
 
   const handleEnterRoom = async (subjectId: string) => {
@@ -84,7 +84,7 @@ const Lounge = () => {
       navigate(`/quiz-room/${subjectId}`, { state: { questions: data.questions } });
     } catch (error) {
       console.error("Failed to generate quiz:", error);
-      toast.error("AI Lab is busy. Please try again in a moment.");
+    toast.error("Oracle Forge is busy. Please try again in a moment.");
     } finally {
       setLoadingSubject(null);
     }
@@ -105,11 +105,11 @@ const Lounge = () => {
           className="text-center mb-20"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[10px] tracking-[0.2em] font-bold mb-6 uppercase">
-            Social Hub
+            Hawkins Hub
           </span>
-          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">Student Lounge</h1>
+          <h1 className="text-7xl md:text-9xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">Upside Lounge</h1>
           <p className="text-white/30 text-lg max-w-2xl mx-auto leading-relaxed mt-8 font-medium italic">       
-            Connect with other scholars and participate in interactive quiz battles.
+            Squad up with other learners and run cinematic quiz battles.
           </p>
         </motion.div>
 
@@ -127,9 +127,9 @@ const Lounge = () => {
                     </div>
                   </div>
 
-                  <h2 className="text-5xl font-black text-white mb-6 tracking-tight uppercase italic">VR Kahoot Battle</h2>
+                  <h2 className="text-5xl font-black text-white mb-6 tracking-tight uppercase italic">Battle Royale Quiz</h2>
                   <p className="text-lg text-white/50 leading-relaxed mb-12 max-w-xl">
-                    Join an immersive virtual reality space where knowledge becomes a competition. Face off against classmates in real-time quiz challenges.
+                    Enter a VR arena where knowledge turns into a boss fight. Face classmates in real-time quiz combat.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-6">
@@ -155,7 +155,7 @@ const Lounge = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center gap-4 mb-12">
             <Radio size={24} className="text-white/40" />
-            <h2 className="text-3xl font-black tracking-tight text-white uppercase italic">AI Quiz Arena</h2>
+            <h2 className="text-3xl font-black tracking-tight text-white uppercase italic">Oracle Quiz Forge</h2>
             <div className="h-px flex-1 bg-white/10" />
           </div>
 

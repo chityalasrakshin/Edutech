@@ -32,7 +32,7 @@ export default function Marketplace() {
         setProducts(p);
         setWallet(w);
       } catch {
-        toast.error("Couldn't load the store.");
+        toast.error("Couldn't load the Black Market.");
       } finally {
         setLoading(false);
       }
@@ -43,7 +43,7 @@ export default function Marketplace() {
     setAddingId(id);
     try {
       await addToCart(id, 1);
-      toast.success("Added to inventory! 🛒");
+      toast.success("Added to the stash!");
     } catch {
       toast.error("Couldn't add item.");
     } finally {
@@ -64,14 +64,14 @@ export default function Marketplace() {
 
         <div className="max-w-7xl mx-auto relative z-10 text-center mb-16 md:mb-24">       
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-6 md:mb-8 uppercase">Campus Commerce</span>
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-12">Marketplace</h1>
+            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-6 md:mb-8 uppercase">Vought-Level Drops</span>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-12">Black Market</h1>
           </motion.div>
 
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }} className="glass-panel px-6 py-3 md:px-10 md:py-5 rounded-[1.5rem] md:rounded-[2.5rem] flex items-center gap-6">
               <div className="text-left border-r border-white/10 pr-6">
-                <p className="text-[8px] md:text-[9px] font-black text-white/20 tracking-widest uppercase mb-1">Available Credits</p>     
+                <p className="text-[8px] md:text-[9px] font-black text-white/20 tracking-widest uppercase mb-1">Available Tokens</p>     
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl md:text-3xl font-black text-white">{wallet?.balance ?? 0}</span>
                   <span className="text-[10px] md:text-xs font-black text-white/30 uppercase">{wallet?.symbol ?? "EDU"}</span>
@@ -101,11 +101,11 @@ export default function Marketplace() {
                 <Box size={24} className="text-white/10 animate-pulse" />
               </div>
             </div>
-            <span className="text-[10px] font-black text-white/20 tracking-[0.5em] uppercase">Syncing Inventory...</span>  
+            <span className="text-[10px] font-black text-white/20 tracking-[0.5em] uppercase">Syncing Stash...</span>  
           </div>
         ) : products.length === 0 ? (
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-40 glass-panel rounded-[3rem] border-dashed">
-            <p className="text-white/20 text-lg font-medium italic">The marketplace is currently offline.</p>
+            <p className="text-white/20 text-lg font-medium italic">The Black Market is currently offline.</p>
           </motion.div>
         ) : (
           <div className="space-y-24 md:space-y-40">
@@ -117,7 +117,7 @@ export default function Marketplace() {
                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40">
                       <Sparkles size={20} />
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-black tracking-tight text-white uppercase italic">Premium Picks</h2>
+                    <h2 className="text-2xl md:text-4xl font-black tracking-tight text-white uppercase italic">Elite Loot Drops</h2>
                     <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
@@ -133,7 +133,7 @@ export default function Marketplace() {
                     <div className="w-10 h-10 md:w-12 md:h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white/40">
                       <Box size={20} />
                     </div>
-                    <h2 className="text-2xl md:text-4xl font-black tracking-tight text-white uppercase italic">Campus Catalog</h2>
+                    <h2 className="text-2xl md:text-4xl font-black tracking-tight text-white uppercase italic">The Stash Catalog</h2>
                     <div className="h-px flex-1 bg-gradient-to-r from-white/20 to-transparent" />
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -167,7 +167,7 @@ function StoreCard({ item, adding, onAdd, index }: { item: Product; adding: bool
             </div>
           </div>
         ) : (
-          <div className="h-64 bg-white/5 flex items-center justify-center italic font-black text-white/5 text-2xl tracking-tighter">GURUKUL ITEM</div>
+          <div className="h-64 bg-white/5 flex items-center justify-center italic font-black text-white/5 text-2xl tracking-tighter">MINDFLIX LOOT</div>
         )}
         <div className="p-8 flex-1 flex flex-col relative">
           <div className="mb-6">
@@ -192,4 +192,3 @@ function StoreCard({ item, adding, onAdd, index }: { item: Product; adding: bool
     </motion.div>
   );
 }
-

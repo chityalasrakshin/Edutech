@@ -3,11 +3,11 @@ import { NavLink } from "@/components/NavLink";
 
 const BottomNav = () => {
   const navItems = [
-    { icon: Home, label: "Home", path: "/" },
-    { icon: ShoppingBag, label: "Marketplace", path: "/marketplace" },
-    { icon: Gamepad2, label: "Playground", path: "/playground" },
-    { icon: Box, label: "Lounge", path: "/lounge" },
-    { icon: User, label: "Profile", path: "/profile" },
+    { icon: Home, label: "Watchtower", path: "/" },
+    { icon: ShoppingBag, label: "Black Market", path: "/marketplace" },
+    { icon: Gamepad2, label: "Danger Room", path: "/playground" },
+    { icon: Box, label: "Upside Lounge", path: "/lounge" },
+    { icon: User, label: "Vault", path: "/profile" },
   ];
 
   return (

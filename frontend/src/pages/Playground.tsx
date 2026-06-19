@@ -10,17 +10,17 @@ import { motion } from "framer-motion";
 import SpatialCard from "@/components/SpatialCard";
 
 const VR_ROOMS = [
-  { id: 2, name: "VR Classroom", subject: "GENERAL", desc: "Join a live virtual classroom session.", players: 7, max: 30, color: "#FBBF24" },
+  { id: 2, name: "Hogwarts Holodeck", subject: "GENERAL", desc: "Join a live virtual classroom with cinematic chaos.", players: 7, max: 30, color: "#FBBF24" },
   { id: 3, name: "Cell City Siege", subject: "BIOLOGY", desc: "Battle viruses inside a 3D living cell.", players: 12, max: 20, color: "#34D399" },
-  { id: 4, name: "Molecule Builder", subject: "CHEMISTRY", desc: "Construct 3D molecules in VR space.", players: 8, max: 15, color: "#60A5FA" },
-  { id: 5, name: "Anatomy VR Lab", subject: "BIOLOGY", desc: "Explore the human body in immersive 3D.", players: 10, max: 20, color: "#F87171" },
+  { id: 4, name: "Heisenberg Molecule Forge", subject: "CHEMISTRY", desc: "Build 3D molecules without breaking bad habits.", players: 8, max: 15, color: "#60A5FA" },
+  { id: 5, name: "Titan Anatomy Lab", subject: "BIOLOGY", desc: "Explore the body like a final-season boss map.", players: 10, max: 20, color: "#F87171" },
 ];
 
 const URLS: Record<string, string> = {
   "Cell City Siege": "https://blood-game-c44cb.web.app/",
-  "Molecule Builder": "https://molecule-builder-911c7.web.app/",
-  "Anatomy VR Lab": "https://my-anatomy-vr-2026.web.app/",
-  "VR Classroom": "https://dclassroom-d128d.web.app/",
+  "Heisenberg Molecule Forge": "https://molecule-builder-911c7.web.app/",
+  "Titan Anatomy Lab": "https://my-anatomy-vr-2026.web.app/",
+  "Hogwarts Holodeck": "https://dclassroom-d128d.web.app/",
 };
 
 export default function Playground() {
@@ -77,12 +77,12 @@ export default function Playground() {
       <section className="pt-24 md:pt-32 pb-12 px-4 md:px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-8 md:gap-12">       
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-4 uppercase">Virtual Arena</span>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter text-gradient leading-[0.9] uppercase italic">Playground</h1>
+            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-4 uppercase">X-Men Training Bay</span>
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tighter text-gradient leading-[0.9] uppercase italic">Danger Room</h1>
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="flex items-center gap-4 md:gap-6">
             <div className="glass-panel px-6 py-3 md:px-8 md:py-4 rounded-[1.5rem] md:rounded-[2rem] text-right">
-              <p className="text-[8px] md:text-[10px] font-bold text-white/30 tracking-widest uppercase mb-1">Active Players</p>
+              <p className="text-[8px] md:text-[10px] font-bold text-white/30 tracking-widest uppercase mb-1">Active Heroes</p>
               <div className="flex items-baseline gap-2">
                 <span className="text-xl md:text-3xl font-black text-white">{totalOnline}</span>
                 <span className="text-[10px] md:text-xs font-bold text-white/30 uppercase">In-Game</span>
@@ -98,7 +98,7 @@ export default function Playground() {
       <div className="max-w-7xl mx-auto px-4 md:px-6 pb-40">
         <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
           <ShieldCheck size={18} className="md:w-5 md:h-5 text-white/40" />
-          <h2 className="text-xl md:text-2xl font-black tracking-tight text-white uppercase italic">Available VR Suites</h2>
+          <h2 className="text-xl md:text-2xl font-black tracking-tight text-white uppercase italic">Available Simulations</h2>
           <div className="h-px flex-1 bg-white/10" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -140,8 +140,8 @@ export default function Playground() {
             <Info size={18} className="md:w-5 md:h-5 text-white/20" />
           </div>
           <div>
-            <h4 className="text-base md:text-lg font-black text-white/80 mb-2 uppercase italic">Arena Guidelines</h4>
-            <p className="text-xs md:text-sm text-white/30 leading-relaxed max-w-3xl">Academic gaming sessions are limited to 2 hours of continuous simulation. Rewards are calculated based on active engagement. Ensure your neural link (VR Headset) is properly calibrated before entering the immersive suites.</p>
+            <h4 className="text-base md:text-lg font-black text-white/80 mb-2 uppercase italic">Danger Room Rules</h4>
+            <p className="text-xs md:text-sm text-white/30 leading-relaxed max-w-3xl">Simulation sessions are limited to 2 hours of continuous play. Rewards are calculated based on active engagement. Calibrate your neural link before entering the cinematic suites.</p>
           </div>
         </motion.div>
       </div>

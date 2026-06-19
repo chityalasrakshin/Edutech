@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { Home, ShoppingBag, Dumbbell, Library, User } from "lucide-react";
 
 const NAV = [
-  { path: "/", label: "Home", icon: Home },
-  { path: "/marketplace", label: "Store", icon: ShoppingBag },
-  { path: "/playground", label: "Playground", icon: Dumbbell },
-  { path: "/lounge", label: "Lounge", icon: Library },
-  { path: "/profile", label: "Locker", icon: User },
+  { path: "/", label: "Watchtower", icon: Home },
+  { path: "/marketplace", label: "Black Market", icon: ShoppingBag },
+  { path: "/playground", label: "Danger Room", icon: Dumbbell },
+  { path: "/lounge", label: "Upside Lounge", icon: Library },
+  { path: "/profile", label: "Vault", icon: User },
 ];
 
 export default function FloatingNav() {

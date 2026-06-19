@@ -18,39 +18,39 @@ type WalletInfo = {
 const SUBJECTS = [
   {
     id: "maths",
-    name: "Mathematics",
-    label: "Logic Arena",
+    name: "Multiverse Maths",
+    label: "Strange Academy",
     color: "#60A5FA",
     icon: Calculator,
-    description: "Advanced calculus, algebra, and geometry.",
-    stats: "15 Topics • 60 Modules",
+    description: "Reality-bending calculus, algebra, and geometry quests.",
+    stats: "15 Arcs • 60 Episodes",
   },
   {
     id: "physics",
-    name: "Physics",
-    label: "Physical World",
+    name: "Vought Physics",
+    label: "Superpower Lab",
     color: "#A855F7",
     icon: Zap,
-    description: "Laws of motion, energy, and the universe.",
-    stats: "12 Topics • 45 Modules",
+    description: "Motion, energy, and universe rules with main-character energy.",
+    stats: "12 Arcs • 45 Episodes",
   },
   {
     id: "chemistry",
-    name: "Chemistry",
-    label: "Atomic Lab",
+    name: "Heisenberg Chem",
+    label: "Cook Lab",
     color: "#34D399",
     icon: Atom,
-    description: "Molecular structures and chemical reactions.",
-    stats: "10 Topics • 35 Modules",
+    description: "Molecules, reactions, and lab logic that actually hits.",
+    stats: "10 Arcs • 35 Episodes",
   },
   {
     id: "anatomy",
-    name: "Anatomy",
-    label: "Life Sciences",
+    name: "Upside Biology",
+    label: "Stranger Lab",
     color: "#F87171",
     icon: Microscope,
-    description: "Explore living organisms and biological systems.",
-    stats: "14 Topics • 50 Modules",
+    description: "Bodies, organisms, and systems from the normal world to the Upside Down.",
+    stats: "14 Arcs • 50 Episodes",
   },
 ];
 
@@ -80,9 +80,9 @@ const Home = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-16 md:mb-20">
           <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-4 md:mb-6 uppercase">
-            Academic Dashboard
+            The Watchtower
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.9] mb-8 md:mb-12 uppercase italic">GURUKUL</h1>
+          <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.9] mb-8 md:mb-12 uppercase italic">MINDFLIX</h1>
 
           {/* QUICK STATS */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 w-full max-w-4xl mx-auto mb-12 md:mb-16 text-center">  
@@ -119,7 +119,7 @@ const Home = () => {
 
         <div className="flex items-center gap-3 md:gap-4 mb-8 md:mb-12">
           <GraduationCap size={20} className="md:w-6 md:h-6 text-white/40" />
-          <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Your Subjects</h2>
+          <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Your Saga Picks</h2>
           <div className="h-px flex-1 bg-white/10" />
         </div>
 
