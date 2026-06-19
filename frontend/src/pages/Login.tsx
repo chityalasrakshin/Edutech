@@ -66,17 +66,17 @@ export default function Login() {
               <Lock size={32} className="text-white/40" />
            </motion.div>
            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-4 md:mb-6 uppercase">
-            Student Portal
+            Admission Gate
           </span>
-           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">GURUKUL LOGIN</h1>
-           <p className="text-white/30 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">Student Authorization Required</p>
+            <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">MINDFLIX LOGIN</h1>
+            <p className="text-white/30 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase">Hero Authorization Required</p>
         </div>
 
         <SpatialCard className="bg-white/[0.02] border-white/5 p-8 md:p-12 backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="space-y-8 md:space-y-10">
             <div className="space-y-6">
               <div>
-                <label className="text-[10px] font-black text-white/30 mb-3 block uppercase tracking-widest">Student Identifier</label>
+                <label className="text-[10px] font-black text-white/30 mb-3 block uppercase tracking-widest">Hero Handle</label>
                 <div className="relative">
                    <div className="absolute left-4 top-1/2 -translate-y-1/2 text-white/20">
                       <User size={18} />
@@ -148,9 +148,9 @@ export default function Login() {
           </form>
 
           <div className="mt-10 pt-10 border-t border-white/5 text-center">
-            <p className="text-xs font-medium text-white/20 mb-4 tracking-wide italic">New to the ecosystem?</p>       
+            <p className="text-xs font-medium text-white/20 mb-4 tracking-wide italic">New to the multiverse?</p>       
             <Link to="/register" className="text-[10px] font-black text-white hover:underline uppercase tracking-[0.2em]">
-              ENROL AS A NEW STUDENT
+              CLAIM YOUR ORIGIN STORY
             </Link>
           </div>
         </SpatialCard>

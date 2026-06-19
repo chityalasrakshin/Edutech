@@ -30,7 +30,7 @@ export default function CartPage() {
   const handleRemove = async (id: string) => {
     try {
       setCart(await removeFromCart(id));
-      toast.success("Removed from bag.");
+          toast.success("Removed from stash.");
     } catch {
       toast.error("Couldn't remove item.");
     }
@@ -39,9 +39,9 @@ export default function CartPage() {
   const handleClear = async () => {
     try {
       setCart(await clearCart());
-      toast.success("Bag cleared.");
+      toast.success("Stash cleared.");
     } catch {
-      toast.error("Couldn't clear cart.");
+        toast.error("Couldn't clear stash.");
     }
   };
 
@@ -79,7 +79,7 @@ export default function CartPage() {
         <div className="max-w-7xl mx-auto relative z-10">
           <Link to="/marketplace" className="inline-flex items-center gap-2 text-white/30 hover:text-white transition-colors mb-12 group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
-            <span className="text-[10px] font-black tracking-widest uppercase">Back to Store</span>
+            <span className="text-[10px] font-black tracking-widest uppercase">Back to Black Market</span>
           </Link>
 
           <div className="text-center mb-16 md:mb-24">
@@ -88,15 +88,15 @@ export default function CartPage() {
                 <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center">
                   <ShoppingBag size={14} className="text-white/40" />
                 </div>
-                <span className="text-white/50 text-[10px] tracking-[0.3em] font-black uppercase">Ready for Commitment</span>
+                <span className="text-white/50 text-[10px] tracking-[0.3em] font-black uppercase">Ready for Checkout</span>
               </div>
-              <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-12">Your Bag</h1>
+              <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-12">Your Stash</h1>
             </motion.div>
 
             <div className="flex justify-center">
               <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.2 }} className="glass-panel px-10 py-5 rounded-[2.5rem] flex items-center gap-4">
                 <div className="text-center">
-                  <p className="text-[9px] font-black text-white/20 tracking-widest uppercase mb-1">Selected Artifacts</p>       
+                   <p className="text-[9px] font-black text-white/20 tracking-widest uppercase mb-1">Selected Loot</p>       
                   <div className="flex items-baseline justify-center gap-2">
                     <span className="text-3xl font-black text-white">{cart?.items.length ?? 0}</span>
                     <span className="text-xs font-black text-white/30 uppercase">Modules</span>
@@ -114,8 +114,8 @@ export default function CartPage() {
             <div className="w-20 h-20 rounded-3xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-8 shadow-2xl">
                <Box size={32} className="text-white/10" />
             </div>
-            <h3 className="text-2xl font-black text-white/80 mb-3 uppercase italic">Bag is empty</h3>
-            <p className="text-white/30 text-sm font-medium mb-12 max-w-sm mx-auto">Browse the marketplace to find high-performance knowledge modules to enhance your student profile.</p>
+            <h3 className="text-2xl font-black text-white/80 mb-3 uppercase italic">Stash is empty</h3>
+            <p className="text-white/30 text-sm font-medium mb-12 max-w-sm mx-auto">Browse the Black Market to find high-performance loot that upgrades your hero profile.</p>
             <Link to="/marketplace">
               <button className="px-10 py-5 rounded-2xl bg-white text-black font-black text-[10px] tracking-[0.2em] hover:scale-110 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.2)] uppercase italic">BROWSE CATALOG</button>
             </Link>
@@ -163,7 +163,7 @@ export default function CartPage() {
               
               <motion.div layout className="pt-8">
                 <button onClick={handleClear} className="w-full py-5 rounded-2xl bg-white/5 border border-white/5 text-white/20 font-black text-[10px] tracking-[0.3em] hover:bg-red-500/10 hover:text-red-500 hover:border-red-500/20 transition-all duration-500 flex items-center justify-center gap-3 uppercase italic">
-                  <Trash2 size={16} /> PURGE BAG RECORDS
+                  <Trash2 size={16} /> PURGE STASH RECORDS
                 </button>
               </motion.div>
             </div>
@@ -190,7 +190,7 @@ export default function CartPage() {
                    <CheckCircle2 size={20} className="text-emerald-400 mt-1 shrink-0" />
                    <div>
                       <p className="text-[10px] font-black text-emerald-400 uppercase tracking-widest mb-1.5">Direct Provisioning</p>
-                      <p className="text-[10px] font-medium text-white/30 leading-relaxed group-hover:text-white/50 transition-colors">Digital artifacts are instantly committed to your secure student locker upon authorization.</p>
+                       <p className="text-[10px] font-medium text-white/30 leading-relaxed group-hover:text-white/50 transition-colors">Digital loot is instantly committed to your secure Vault upon authorization.</p>
                    </div>
                 </div>
                 <button onClick={handleRedeem} disabled={redeeming} className="w-full py-6 rounded-2xl bg-white text-black font-black text-[12px] tracking-[0.3em] hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_50px_rgba(255,255,255,0.2)] flex items-center justify-center gap-4 uppercase italic">

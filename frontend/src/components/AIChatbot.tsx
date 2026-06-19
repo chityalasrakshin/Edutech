@@ -38,7 +38,7 @@ const AIChatbot = () => {
   const [isVoiceMode, setIsVoiceMode] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { sender: "bot", text: "Hi! I'm Helper Bot, your AI learning assistant. How can I help you today?" },
+    { sender: "bot", text: "Hi, I'm Jarvis Jr., your AI study sidekick. What quest are we solving today?" },
   ]);
   const [inputValue, setInputValue] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -211,7 +211,7 @@ const AIChatbot = () => {
                     <Bot className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-sm">Helper Bot</h3>
+                    <h3 className="font-semibold text-sm">Jarvis Jr.</h3>
                     <div className="flex items-center gap-1">
                       <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
                       <span className="text-[10px] text-muted-foreground">Online</span>
@@ -238,7 +238,7 @@ const AIChatbot = () => {
                    <div className="text-center space-y-2">
                      <h4 className="text-lg font-bold uppercase italic">Voice Mode</h4>
                      <p className="text-xs text-muted-foreground">
-                       {isListening ? "Helper Bot is listening..." : "Connecting..."}
+                        {isListening ? "Jarvis Jr. is listening..." : "Connecting..."}
                      </p>
                      {isLoading && (
                        <p className="text-[10px] text-primary animate-pulse font-medium">Speaking... (Talk to interrupt)</p>

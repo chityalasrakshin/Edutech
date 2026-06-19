@@ -78,20 +78,20 @@ export default function Register() {
               <UserPlus size={32} className="text-white/40" />
            </motion.div>
            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-bold mb-4 md:mb-6 uppercase">
-            New Enrolment
+             Origin Story Setup
           </span>
-           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">GURUKUL ID</h1>
-           <p className="text-white/30 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-center mx-auto max-w-md">Initialize your student profile to access the knowledge ecosystem.</p>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gradient leading-none mb-4 uppercase italic">MINDFLIX ID</h1>
+            <p className="text-white/30 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase text-center mx-auto max-w-md">Initialize your hero profile to access the learning multiverse.</p>
         </div>
         <SpatialCard className="bg-white/[0.02] border-white/5 p-6 md:p-12 backdrop-blur-sm">
           <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-8 md:gap-y-10">
             <div className="space-y-8 md:space-y-10">
                <div className="flex items-center gap-4 mb-4 text-white/20 border-b border-white/5 pb-4">
                   <ShieldCheck size={16} />
-                  <span className="text-[10px] font-black tracking-widest uppercase">Section 01: Identity</span>
+                  <span className="text-[10px] font-black tracking-widest uppercase">Section 01: Origin</span>
                </div>
                <div className="group">
-                  <label className="text-[10px] font-black text-white/20 group-focus-within:text-white/50 mb-3 block uppercase tracking-widest transition-colors">Student Username</label>
+                   <label className="text-[10px] font-black text-white/20 group-focus-within:text-white/50 mb-3 block uppercase tracking-widest transition-colors">Hero Handle</label>
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 text-white/10 group-focus-within:text-white/40 transition-colors">
                       <ClipboardCheck size={18} />
@@ -161,15 +161,15 @@ export default function Register() {
                   </motion.div>
                 )}
               </AnimatePresence> 
-              <button type="submit" disabled={loading} className="w-full py-6 rounded-2xl bg-white text-black font-black text-[12px] tracking-[0.2em] hover:scale-[1.01] active:scale-[0.99] transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)] flex items-center justify-center gap-4 uppercase italic">
-                {loading ? <><Loader2 size={20} className="animate-spin" /> PROCESSING APPLICATION...</> : <>FINALIZE ENROLMENT <ArrowRight size={20} /></>}
+               <button type="submit" disabled={loading} className="w-full py-6 rounded-2xl bg-white text-black font-black text-[12px] tracking-[0.2em] hover:scale-[1.01] active:scale-[0.99] transition-all shadow-[0_0_40px_rgba(255,255,255,0.2)] flex items-center justify-center gap-4 uppercase italic">
+                 {loading ? <><Loader2 size={20} className="animate-spin" /> PROCESSING ORIGIN...</> : <>LAUNCH ORIGIN STORY <ArrowRight size={20} /></>}
               </button>
             </div>
           </form>
           <div className="mt-12 pt-10 border-t border-white/5 text-center">
-            <p className="text-xs font-medium text-white/20 mb-4 tracking-wide italic">Already have an active student ID?</p>
+            <p className="text-xs font-medium text-white/20 mb-4 tracking-wide italic">Already have an active MindFlix ID?</p>
             <Link to="/login" className="text-[10px] font-black text-white/40 hover:text-white transition-colors uppercase tracking-[0.3em]">
-              BACK TO ADMISSION GATE
+              BACK TO LOGIN PORTAL
             </Link>
           </div>
         </SpatialCard>

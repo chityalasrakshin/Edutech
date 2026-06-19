@@ -110,9 +110,9 @@ export default function Profile() {
 
         <div className="max-w-7xl mx-auto relative z-10 text-center mb-16 md:mb-24">       
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-black mb-6 md:mb-8 uppercase">Student Management</span>
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-8">Student Locker</h1>
-            <p className="text-white/30 text-[10px] md:text-xs font-black tracking-[0.3em] uppercase">Secure Personal Records & Digital Assets</p>
+            <span className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-white/5 border border-white/10 text-white/50 text-[8px] md:text-[10px] tracking-[0.2em] font-black mb-6 md:mb-8 uppercase">Hero Control Panel</span>
+            <h1 className="text-5xl md:text-7xl lg:text-9xl font-black tracking-tighter text-gradient leading-[0.85] uppercase italic mb-8">The Vault</h1>
+            <p className="text-white/30 text-[10px] md:text-xs font-black tracking-[0.3em] uppercase">Secure Origin Records & Digital Assets</p>
           </motion.div>
         </div>
       </section>
@@ -150,13 +150,13 @@ export default function Profile() {
                     <p className="text-4xl md:text-5xl font-black text-white italic">{level}</p>
                   </div>
                   <div className="p-6 rounded-3xl bg-white/[0.02] border border-white/5 text-right">
-                    <p className="text-[9px] font-black text-white/20 tracking-widest uppercase mb-2">Edu Coins</p>
+                     <p className="text-[9px] font-black text-white/20 tracking-widest uppercase mb-2">Verse Tokens</p>
                     <p className="text-4xl md:text-5xl font-black text-white italic">{wallet?.balance ?? 0}</p>
                   </div>       
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-end px-2">
-                    <span className="text-[9px] font-black text-white/30 tracking-widest uppercase">Academic Experience</span>
+                    <span className="text-[9px] font-black text-white/30 tracking-widest uppercase">Saga Experience</span>
                     <span className="text-[10px] font-black text-white/60 tracking-widest">{user?.xp ?? 0} / 1000 XP</span>
                   </div>
                   <div className="h-2 w-full bg-white/5 rounded-full overflow-hidden p-0.5 border border-white/5">
@@ -165,7 +165,7 @@ export default function Profile() {
                 </div>
               </div>
               <div className="p-8 flex gap-4 bg-white/[0.01]">
-                <button onClick={() => setEditOpen(true)} className="flex-1 py-5 rounded-2xl bg-white text-black font-black text-[10px] tracking-[0.2em] hover:scale-[1.02] active:scale-[0.98] transition-all uppercase italic shadow-xl">EDIT RECORDS</button>
+                <button onClick={() => setEditOpen(true)} className="flex-1 py-5 rounded-2xl bg-white text-black font-black text-[10px] tracking-[0.2em] hover:scale-[1.02] active:scale-[0.98] transition-all uppercase italic shadow-xl">EDIT ORIGIN</button>
                 <button onClick={logout} className="px-6 py-5 rounded-2xl bg-white/5 border border-white/10 text-white/30 font-black text-[10px] tracking-widest hover:bg-red-500/20 hover:text-red-500 hover:border-red-500/20 transition-all duration-500 shadow-lg"><LogOut size={20} /></button>
               </div>
             </SpatialCard>
@@ -211,14 +211,14 @@ export default function Profile() {
             <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}>
               <div className="flex items-center gap-6 mb-10">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/30"><UserIcon size={20} /></div>
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Metadata Records</h2>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Origin Metadata</h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   { label: "Identity Email", value: user?.email || "N/A", icon: Mail },
                   { label: "Communication", value: user?.mobile_number || "Not assigned", icon: Phone },
-                  { label: "Base Institution", value: user?.institution_name || "GURUKUL Central", icon: School }, 
+                  { label: "Base Institution", value: user?.institution_name || "MindFlix Central", icon: School }, 
                   { label: "Lifetime XP", value: `${user?.xp ?? 0} TOTAL EXPERIENCE`, icon: Zap },
                 ].map((item, i) => (
                   <div key={i} className="glass-panel p-6 md:p-8 rounded-[2rem] flex items-center gap-6 border border-white/5 group hover:bg-white/[0.08] hover:border-white/20 transition-all duration-500">
@@ -235,7 +235,7 @@ export default function Profile() {
             <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
               <div className="flex items-center gap-6 mb-10">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/30"><Settings size={20} /></div>
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Scholar Observations</h2>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Oracle Observations</h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
                 <span className="text-[9px] font-black text-white/20 tracking-widest uppercase border border-white/10 px-2 py-1 rounded-lg">AI Generated</span>
               </div>
@@ -251,7 +251,7 @@ export default function Profile() {
                         </div>
                       </div>
                     ))}
-                    <p className="text-[9px] font-black text-white/20 tracking-[0.3em] uppercase text-center pt-4">Analyzing academic profile...</p>
+                    <p className="text-[9px] font-black text-white/20 tracking-[0.3em] uppercase text-center pt-4">Analyzing saga profile...</p>
                   </div>
                 )}
                 {obsError && !obsLoading && observations.length === 0 && (
@@ -284,7 +284,7 @@ export default function Profile() {
             <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }}>
               <div className="flex items-center gap-6 mb-10">
                 <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-white/30"><ShoppingBag size={20} /></div>
-                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Redemption History</h2>
+                <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white uppercase italic">Loot History</h2>
                 <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
               </div>
               {orders.length === 0 ? (
@@ -326,7 +326,7 @@ export default function Profile() {
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={() => setEditOpen(false)} className="absolute inset-0 bg-black/90 backdrop-blur-md" />
             <motion.div initial={{ opacity: 0, scale: 0.95, y: 20 }} animate={{ opacity: 1, scale: 1, y: 0 }} exit={{ opacity: 0, scale: 0.95, y: 20 }} className="relative w-full max-w-xl glass-panel p-10 rounded-[3rem] border border-white/10 shadow-2xl overflow-y-auto max-h-[90vh]">
               <div className="flex justify-between items-center mb-12">
-                <div><h3 className="text-3xl font-black text-white tracking-tight uppercase italic">Edit Records</h3><p className="text-xs font-bold text-white/30 tracking-widest mt-1 uppercase">Student Authorization Required</p></div>      
+                 <div><h3 className="text-3xl font-black text-white tracking-tight uppercase italic">Edit Origin</h3><p className="text-xs font-bold text-white/30 tracking-widest mt-1 uppercase">Hero Authorization Required</p></div>      
                 <button onClick={() => setEditOpen(false)} className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/50 hover:bg-white hover:text-black transition-all"><X size={20} /></button>
               </div>
               <form onSubmit={handleSubmit} className="space-y-8">

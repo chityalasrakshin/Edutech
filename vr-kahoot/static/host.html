@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kahoot VR - Host</title>
+    <title>MindFlix Battle Royale - Host</title>
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #2c3e50; color: white; display: flex; flex-direction: column; align-items: center; }
@@ -20,11 +20,11 @@
     </style>
 </head>
 <body>
-    <h1>Host Control Panel</h1>
+    <h1>Battle Director Panel</h1>
     
     <div class="card">
-        <button onclick="nextQuestion()">Start / Next Question</button>
-        <button class="reset-btn" onclick="resetGame()">RESET GAME</button>
+        <button onclick="nextQuestion()">Start / Next Round</button>
+        <button class="reset-btn" onclick="resetGame()">RESET BATTLE</button>
     </div>
 
     <div class="card" id="statusCard">
@@ -33,7 +33,7 @@
     </div>
 
     <div class="card">
-        <h3>Leaderboard</h3>
+        <h3>Hero Board</h3>
         <ul id="playerList"></ul>
     </div>
 
@@ -64,7 +64,7 @@
         }
 
         socket.on('questions_loading', () => {
-            showStatus('Generating questions with AI…', 'status-loading');
+            showStatus('Forging rounds with the Oracle...', 'status-loading');
         });
 
         socket.on('questions_ready', (data) => {
@@ -72,7 +72,7 @@
         });
 
         socket.on('profiles_saved', () => {
-            showStatus('Player profiles saved to database ✓', 'status-saved');
+            showStatus('Hero profiles saved to the Vault', 'status-saved');
         });
     </script>
 </body>
